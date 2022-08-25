@@ -7,8 +7,9 @@
     {
       "fileMatch": ["(^|/)kustomization\\.ya?ml$"],
       "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)\\s.*/raw/(?<currentValue>.*)//"
-      ]
+        "- https://github.com/(?<depName>[\\w_-]+/[\\w_-]+)/raw/(?<currentValue>.*)//"
+      ],
+      "datasourceTemplate": "github-releases"
     }
   ]
 }
