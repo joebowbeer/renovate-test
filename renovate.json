@@ -7,7 +7,7 @@
     {
       "fileMatch": ["(^|/)kustomization\\.ya?ml$"],
       "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)\\s.*/raw/(?<currentValue>.*)//\\s"
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)\\s.*/raw/(?<currentValue>.*)//"
       ]
     }
   ]
