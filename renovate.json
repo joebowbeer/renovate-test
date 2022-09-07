@@ -15,8 +15,11 @@
   "regexManagers": [
     {
       "fileMatch": ["(^|/)kustomization\\.ya?ml$"],
+      "matchStringsStrategy": "any",
       "matchStrings": [
-        "- https://github.com/(?<depName>[\\w_-]+/[\\w_-]+)/raw/(?<currentValue>.*)//"
+        "https://github.com/(?<depName>[\\w-]+/[\\w-]+)/raw/(?<currentValue>[\\w\\.-]+)//",
+        "https://raw.githubusercontent.com/(?<depName>[\\w-]+/[\\w-]+)/(?<currentValue>[\\w\\.-]+)/",
+        "https://github.com/(?<depName>[\\w-]+/[\\w-]+)/releases/download/(?<currentValue>[\\w\\.-]+)/"
       ],
       "datasourceTemplate": "github-releases"
     }
