@@ -8,6 +8,7 @@
   },
   "packageRules": [
     {
+      "matchManagers": ["kubernetes"],
       "extractVersion": "^stable-(?<version>.*)$"
     }
   ],
