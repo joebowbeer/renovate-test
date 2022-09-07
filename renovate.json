@@ -3,6 +3,9 @@
   "extends": [
     "config:base"
   ],
+  "kubernetes": {
+    "fileMatch": ["^.*\\.yaml$"]
+  },
   "regexManagers": [
     {
       "fileMatch": ["(^|/)kustomization\\.ya?ml$"],
