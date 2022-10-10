@@ -1,0 +1,3 @@
+ARG NODE_VERSION=14.19
+
+FROM node:${NODE_VERSION}-alpine as code
