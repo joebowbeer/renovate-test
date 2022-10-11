@@ -1,3 +1,3 @@
-ARG NODE_VERSION=14.19
+ARG NODE_BASE=node:14.19-alpine
 
-FROM node:${NODE_VERSION}-alpine as code
+FROM ${NODE_BASE} as code
