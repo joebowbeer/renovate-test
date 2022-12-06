@@ -16,7 +16,8 @@
     {
       "matchPackageNames": ["node"],
       "matchManagers": ["dockerfile"],
-      "matchUpdateTypes": ["minor"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
     }
   ],
   "regexManagers": [
