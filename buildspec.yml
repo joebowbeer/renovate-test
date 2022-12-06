@@ -1,0 +1,10 @@
+version: 0.2
+
+env:
+  variables:
+    LW_SCANNER_VERSION=v0.11.0 # renovate: depName=lacework/lacework-vulnerability-scanner
+
+phases:
+  install:
+    commands:
+      - curl -sL https://github.com/lacework/lacework-vulnerability-scanner/releases/download/${LW_SCANNER_VERSION}/lw-scanner-linux-amd64 -o lw-scanner
