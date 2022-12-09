@@ -73,7 +73,7 @@ spec:
           runAsUser: 0
       containers:
       - name: identity
-        image: cr.l5d.io/linkerd/controller:stable-2.12.1
+        image: cr.l5d.io/linkerd/controller:stable-2.12.3
         args:
         - identity
         - -log-level=info
@@ -111,7 +111,7 @@ spec:
         securityContext:
           runAsUser: 2103
       - name: linkerd-proxy
-        image: cr.l5d.io/linkerd/proxy:stable-2.12.1
+        image: cr.l5d.io/linkerd/proxy:stable-2.12.3
         ports:
         - name: linkerd-proxy
           containerPort: 4143
@@ -312,7 +312,7 @@ spec:
           runAsUser: 0
       containers:
       - name: linkerd-proxy
-        image: cr.l5d.io/linkerd/proxy:stable-2.12.1
+        image: cr.l5d.io/linkerd/proxy:stable-2.12.3
         ports:
         - name: linkerd-proxy
           containerPort: 4143
@@ -430,7 +430,7 @@ spec:
           readOnlyRootFilesystem: true
           runAsUser: 2102
       - name: proxy-injector
-        image: cr.l5d.io/linkerd/controller:stable-2.12.1
+        image: cr.l5d.io/linkerd/controller:stable-2.12.3
         args:
         - proxy-injector
         - -log-level=info
@@ -510,7 +510,7 @@ spec:
             kubernetes.io/os: linux
           containers:
           - name: heartbeat
-            image: cr.l5d.io/linkerd/controller:stable-2.12.1
+            image: cr.l5d.io/linkerd/controller:stable-2.12.3
             args:
             - "heartbeat"
             - "-controller-namespace=linkerd"
