@@ -33,7 +33,7 @@
     },
     {
       "fileMatch": ["(^|/)buildspec.*\\.ya?ml$"],
-      "matchStrings": ["VERSION=(?<currentValue>.*?) # renovate: depName=(?<depName>.*?)\\n"],
+      "matchStrings": ["VERSION: (?<currentValue>.*?) # renovate: depName=(?<depName>.*?)\\n"],
       "datasourceTemplate": "github-releases"
     }
   ]
