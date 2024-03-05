@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    LW_SCANNER_VERSION: v0.16.0 # renovate: depName=lacework/lacework-vulnerability-scanner
+    LW_SCANNER_VERSION: v0.24.0 # renovate: depName=lacework/lacework-vulnerability-scanner
 
 phases:
   install:
