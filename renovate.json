@@ -22,6 +22,11 @@
   ],
   "regexManagers": [
     {
+      "fileMatch": ["(^|/)buildspec.*\\.ya?ml$"],
+      "matchStrings": ["VERSION: (?<currentValue>.*?) # renovate: depName=(?<depName>.*?)\\n"],
+      "datasourceTemplate": "github-releases"
+    },
+    {
       "fileMatch": ["(^|/)kustomization\\.ya?ml$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
@@ -32,8 +37,12 @@
       "datasourceTemplate": "github-releases"
     },
     {
-      "fileMatch": ["(^|/)buildspec.*\\.ya?ml$"],
-      "matchStrings": ["VERSION: (?<currentValue>.*?) # renovate: depName=(?<depName>.*?)\\n"],
+      "fileMatch": ["(^|/)kustomization\\.ya?ml$"],
+      "matchStringsStrategy": "any",
+      "matchStrings": [
+        "https://app.getambassador.io/yaml/emissary/(?<currentValue>[\\w\\.-]+)/emissary-crds.yaml"
+      ],
+      "depNameTemplate": "emissary-ingress/emissary",
       "datasourceTemplate": "github-releases"
     }
   ]
