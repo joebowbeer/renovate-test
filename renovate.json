@@ -6,9 +6,6 @@
   "kubernetes": {
     "fileMatch": ["^.*\\.yaml$"]
   },
-  "python": {
-    "fileMatch": ["Dockerfile"]
-  },
   "packageRules": [
     {
       "matchPackagePatterns": ["/linkerd/"],
@@ -47,6 +44,14 @@
       ],
       "depNameTemplate": "emissary-ingress/emissary",
       "datasourceTemplate": "github-releases"
-    }
+    },
+    {
+      "fileMatch": ["(^|/)Dockerfile.*$", "^.*\\.ya?ml$"],
+      "matchStringStrategy": "any",
+      "matchStrings": [
+        "pip3? install (?<depName>[\\w-]+)==(?<currentValue>[\\w\\.-]+)"
+      ],
+      "datasourceTemplate": "pypi"
+    }      
   ]
 }
