@@ -47,7 +47,7 @@
     },
     {
       "fileMatch": ["(^|/)Dockerfile.*$", "^.*\\.ya?ml$"],
-      "matchStringStrategy": "any",
+      "matchStringsStrategy": "any",
       "matchStrings": [
         "pip3? install (?<depName>[\\w-]+)==(?<currentValue>[\\w\\.-]+)"
       ],
