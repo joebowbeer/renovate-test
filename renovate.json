@@ -49,10 +49,10 @@
       "datasourceTemplate": "github-releases"
     },
     {
-      "fileMatch": ["(^|/)Dockerfile.*$", "^.*\\.ya?ml$"],
+      "fileMatch": ["(^|/)Dockerfile$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
-        "pip3? install (?<depName>[\\w-]+)==(?<currentValue>[\\w\\.-]+)"
+        "RUN pip install (?<depName>.*?)==(?<currentValue>.*?)\\n"
       ],
       "datasourceTemplate": "pypi"
     }      
