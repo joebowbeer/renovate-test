@@ -20,13 +20,15 @@
       "enabled": false
     }
   ],
-  "regexManagers": [
+  "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": ["(^|/)buildspec.*\\.ya?ml$"],
       "matchStrings": ["VERSION: (?<currentValue>.*?) # renovate: depName=(?<depName>.*?)\\n"],
       "datasourceTemplate": "github-releases"
     },
     {
+      "customType": "regex",
       "fileMatch": ["(^|/)kustomization\\.ya?ml$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
@@ -37,6 +39,7 @@
       "datasourceTemplate": "github-releases"
     },
     {
+      "customType": "regex",
       "fileMatch": ["(^|/)kustomization\\.ya?ml$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
@@ -46,6 +49,7 @@
       "datasourceTemplate": "github-releases"
     },
     {
+      "customType": "regex",
       "fileMatch": ["(^|/)Dockerfile.*$", "^.*\\.ya?ml$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
