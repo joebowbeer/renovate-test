@@ -6,9 +6,6 @@
   "kubernetes": {
     "fileMatch": ["^.*\\.yaml$"]
   },
-  "python": {
-    "enabled": true
-  },
   "packageRules": [
     {
       "matchPackagePatterns": ["/linkerd/"],
