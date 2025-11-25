@@ -52,7 +52,7 @@
       "fileMatch": ["(^|/)Dockerfile.*$", "^.*\\.ya?ml$"],
       "matchStringsStrategy": "any",
       "matchStrings": [
-        "pip3? install (?<depName>[\\w-]+)==(?<currentValue>[\\w\\.]+))"
+        "pip3? install (?<depName>[\\w-]+)==(?<currentValue>[\\w\\.]+)"
       ],
       "datasourceTemplate": "pypi"
     }      
