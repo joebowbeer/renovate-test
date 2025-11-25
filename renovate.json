@@ -4,7 +4,7 @@
     "config:base"
   ],
   "kubernetes": {
-    "managerFilePatterns": ["^.*\\.yaml$"]
+    "managerFilePatterns": ["/^.*\\.yaml$/"]
   },
   "packageRules": [
     {
@@ -23,13 +23,13 @@
   "customManagers": [
     {
       "customType": "regex",
-      "managerFilePatterns": ["(^|/)buildspec.*\\.ya?ml$"],
+      "managerFilePatterns": ["/(^|/)buildspec.*\\.ya?ml$/"],
       "matchStrings": ["VERSION: (?<currentValue>.*?) # renovate: depName=(?<depName>.*?)\\n"],
       "datasourceTemplate": "github-releases"
     },
     {
       "customType": "regex",
-      "managerFilePatterns": ["(^|/)kustomization\\.ya?ml$"],
+      "managerFilePatterns": ["/(^|/)kustomization\\.ya?ml$/"],
       "matchStringsStrategy": "any",
       "matchStrings": [
         "https://github.com/(?<depName>[\\w-]+/[\\w-]+)/raw/(?<currentValue>[\\w\\.-]+)//",
@@ -40,7 +40,7 @@
     },
     {
       "customType": "regex",
-      "managerFilePatterns": ["(^|/)kustomization\\.ya?ml$"],
+      "managerFilePatterns": ["/(^|/)kustomization\\.ya?ml$/"],
       "matchStringsStrategy": "any",
       "matchStrings": [
         "https://app.getambassador.io/yaml/emissary/(?<currentValue>[\\w\\.-]+)/emissary-crds.yaml"
@@ -50,7 +50,10 @@
     },
     {
       "customType": "regex",
-      "managerFilePatterns": ["(^|/)Dockerfile.*$", "^.*\\.ya?ml$"],
+      "managerFilePatterns": [
+        "/(^|/)Dockerfile.*$/",
+        "/^.*\\.ya?ml$/"
+      ],
       "matchStringsStrategy": "any",
       "matchStrings": [
         "pip3? install (?<depName>[\\w-]+)==(?<currentValue>[\\w\\.]+)"
