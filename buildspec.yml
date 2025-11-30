@@ -8,4 +8,4 @@ phases:
   install:
     commands:
       - curl -sL https://github.com/lacework/lacework-vulnerability-scanner/releases/download/${LW_SCANNER_VERSION}/lw-scanner-linux-amd64 -o lw-scanner
-      - pip3 install mkdocs-techdocs-core==1.5.0
+      - pip3 install mkdocs-techdocs-core==1.6.0
