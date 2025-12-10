@@ -3,5 +3,5 @@ kind: Kustomization
 namespace: argocd
 resources:
 - https://github.com/argoproj/argo-cd/raw/v3.2.1//manifests/install.yaml
-- https://app.getambassador.io/yaml/emissary/3.9.1/emissary-crds.yaml
+- https://app.getambassador.io/yaml/emissary/3.10.0/emissary-crds.yaml
 - resources.yaml
