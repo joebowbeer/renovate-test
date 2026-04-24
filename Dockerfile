@@ -1,5 +1,5 @@
 # Stage 1: Build stage
-FROM node:24.15-trixie-slim AS build
+FROM node:25.9-trixie-slim AS build
 
 WORKDIR /app
 # Create a simple Hello World script
