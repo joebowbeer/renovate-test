@@ -7,7 +7,7 @@ RUN echo 'console.log("Hello, World!");' > hello.js
 
 # Stage 2: Runtime stage using Distroless Node 24 on Debian 13
 # Pinned to a stable digest for gcr.io/distroless/nodejs24-debian13:nonroot
-FROM gcr.io/distroless/nodejs24-debian13@sha256:28fd420825d8e922eab0fd91740c7cf88ddbdc8116a2b20a82049f0c946feb03
+FROM gcr.io/distroless/nodejs24-debian13@sha256:96df910f65fdd8a21d00d14d4cc046adcfcf3ced2d5e96be4b39ebde9f4866c6
 
 # Distroless images already include a 'nonroot' user (UID 65532)
 USER nonroot
